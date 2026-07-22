@@ -1,0 +1,30 @@
+{
+  "name": "rental-agreement-analyzer-backend",
+  "version": "1.0.0",
+  "description": "AI-powered rental agreement risk analyzer with vector-based clause matching",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "seed": "node data/seedClauseDatabase.js"
+  },
+  "dependencies": {
+    "@xenova/transformers": "^2.17.2",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.3.1",
+    "groq-sdk": "^0.5.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.5.0",
+    "multer": "^1.4.5-lts.1",
+    "pdf-parse": "^1.1.1",
+    "pdfkit": "^0.19.1",
+    "tesseract.js": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
