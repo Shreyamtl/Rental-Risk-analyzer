@@ -13,7 +13,13 @@ connectDB();
 if (!fs.existsSync("uploads")) fs.mkdirSync("uploads");
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: [
+    "http://localhost:5173",
+    "https://rental-risk-analyzer.vercel.app", 
+  ],
+  credentials: true,
+}));
 app.use(express.json());
 
 const limiter = rateLimit({ windowMs: 15 * 60 * 1000, max: 100 });
